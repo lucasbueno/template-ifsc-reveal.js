@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Template do IFSC para o reveal.js</title>
+
+    <!-- Fonte Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Reveal.js Core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <!-- Tema Base (Simple) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/simple.min.css"
+        id="theme">
+
+    <!-- CSS para o Highlight de Código (Monokai) -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/monokai.min.css"
+        id="highlight-theme">
+
+    <style>
+        /* Cores Institucionais dos Institutos Federais */
+        :root {
+            --if-green: #2F9E41;
+            --if-red: #CC0000;
+            --if-dark: #333333;
+        }
+
+        /* Sobrescrita de estilos base para o padrão da instituição */
+        .reveal {
+            font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Estilo dos Títulos */
+        .reveal h1,
+        .reveal h2,
+        .reveal h3,
+        .reveal h4 {
+            color: var(--if-green);
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            text-transform: none;
+        }
+
+        .reveal h1 {
+            font-size: 2.5em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .reveal h2 {
+            font-size: 1.8em;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Ajuste de links */
+        .reveal a {
+            color: var(--if-green);
+            transition: color 0.2s ease;
+        }
+
+        .reveal a:hover {
+            color: var(--if-red);
+            text-shadow: none;
+        }
+
+        /* Altera a cor padrão das setas */
+        .reveal .controls button {
+            color: var(--if-dark) !important;
+            /* Substitua pela cor desejada */
+        }
+
+        /* Opcional: cor da seta quando estiver desabilitada (início/fim da apresentação) */
+        .reveal .controls button:disabled {
+            color: var(--if-dark) !important;
+            opacity: 0.5;
+        }
+
+        /* Opcional: cor ao passar o mouse */
+        .reveal .controls button:hover:not(:disabled) {
+            color: var(--if-dark) !important;
+        }
+
+        /* Barras decorativas institucionais (Cabeçalho e Rodapé simulados) */
+        .ifsc-decor {
+            --progress: 0%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(to right, var(--if-green) var(--progress), var(--if-red) var(--progress));
+            z-index: 1000;
+        }
+
+        /* Ajuste de listas */
+        .reveal ul {
+            margin-left: 1.5em;
+        }
+
+        .reveal li {
+            margin-bottom: 10px;
+        }
+
+        .reveal li::marker {
+            color: var(--if-green);
+        }
+
+        /* Caixas de destaque */
+        .box-destaque {
+            background-color: #e9f5ec;
+            border-left: 5px solid var(--if-green);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            text-align: left;
+            font-size: 0.8em;
+        }
+
+        /* Estilo para as tags code inline */
+        .reveal code:not(.hljs) {
+            background-color: #f0f0f0;
+            color: var(--if-red);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        /* Ajuste fino em blocos de código */
+        .reveal pre code {
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Elementos visuais fixos da identidade -->
+    <div class="ifsc-decor"></div>
+
+    <!-- Container principal do Reveal -->
+    <div class="reveal">
+        <!-- Todas as seções dentro de div.slides viram slides -->
+        <div class="slides">
+
+            <!-- Slide de Capa -->
+            <section>
+                <div style="display:flex; justify-content:center; align-items:center; margin-bottom:30px;">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Instituto_Federal_de_Santa_Catarina_-_Marca_Vertical_2015.svg"
+                        alt="Logo do Instituto Federal de Santa Catarina"
+                        style="max-height: 200px; background: transparent; border: none; box-shadow: none; margin: 0;">
+                </div>
+                <h1>Título da Aula</h1>
+                <h3>Subtítulo ou Disciplina</h3>
+                <p>
+                    <small>Prof. Lucas Bueno</small><br>
+                    <small>DAGCTC / Câmpus Florianópolis</small>
+                </p>
+            </section>
+
+            <!-- Slide Simples -->
+            <section>
+                <h2>Como usar este template</h2>
+                <p>
+                    Para usar, basta copiar o código fonte deste arquivo HTML.
+                </p>
+                <div class="box-destaque">
+                    <strong>Dica:</strong> Cada tela (slide) é separada pela tag <code>&lt;section&gt;</code> e
+                    <code>&lt;/section&gt;</code>. Modifique o texto que está dentro dessas tags para criar suas
+                    próprias aulas.
+                </div>
+                <p>Pressione a <strong>Seta Direita</strong> para continuar explorando os recursos.</p>
+            </section>
+
+            <!-- Slides Verticais (Seções Aninhadas) -->
+            <section>
+                <!-- Slide Vertical 1 -->
+                <section>
+                    <h2>Tópicos e Subtópicos</h2>
+                    <p>O Reveal.js permite navegar para baixo para detalhar um assunto.</p>
+                    <p>Pressione a <strong>Seta para Baixo</strong> neste slide!</p>
+                </section>
+
+                <!-- Slide Vertical 2 -->
+                <section>
+                    <h2>Subtópico 1</h2>
+                    <p>Como criar slides assim?</p>
+                    <pre><code class="html" data-trim data-noescape>
+&lt;section&gt;
+    &lt;section&gt;Tópico Principal&lt;/section&gt;
+    &lt;section&gt;Subtópico 1&lt;/section&gt;
+    &lt;section&gt;Subtópico 2&lt;/section&gt;
+&lt;/section&gt;
+                    </code></pre>
+                </section>
+
+                <!-- Slide Vertical 3 -->
+                <section>
+                    <h2>Subtópico 2</h2>
+                    <p>Você pode colocar imagens, textos e muito mais nos subníveis.</p>
+                    <p>Use a <strong>Seta Direita</strong> para ir ao próximo grande assunto.</p>
+                </section>
+            </section>
+
+            <!-- Fragmentos (Aparecendo aos poucos) -->
+            <section>
+                <h2>Animações (Fragmentos)</h2>
+                <p>Você pode fazer o conteúdo aparecer em partes.</p>
+                <ul>
+                    <li class="fragment">Primeiro ponto (Aperte a seta)</li>
+                    <li class="fragment">Segundo ponto, ideal para suspense!</li>
+                    <li class="fragment">Como fazer? Adicione <code>class="fragment"</code> na tag (como num
+                        <code>&lt;li&gt;</code> ou <code>&lt;p&gt;</code>).
+                    </li>
+                </ul>
+                <div class="fragment box-destaque">
+                    Também funciona para blocos inteiros!
+                </div>
+            </section>
+
+            <!-- Código Fonte e TI -->
+            <section>
+                <h2>Códigos Fonte</h2>
+                <p>Professores da área de TI vão adorar o Highlight de sintaxe nativo:</p>
+                <pre><code class="python" data-trim data-line-numbers="1-2|4-6">
+def calcular_media(notas):
+    """Calcula a média de uma lista de notas"""
+    
+    total = sum(notas)
+    media = total / len(notas)
+    return media
+                </code></pre>
+                <p><small>Você pode até destacar linhas específicas usando
+                        <code>data-line-numbers="1-2|4-6"</code>.</small></p>
+            </section>
+
+            <!-- Fórmulas Matemáticas -->
+            <section>
+                <h2>Matemática e Física</h2>
+                <p>O suporte nativo a LaTeX (via MathJax) é automático. Basta envolver suas fórmulas.</p>
+                <p>Fórmula Inline: \(E = mc^2\)</p>
+                <p>Fórmula em Bloco:</p>
+                \[ \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
+            </section>
+
+            <!-- Layouts e Colunas -->
+            <section>
+                <h2>Colunas e Layouts</h2>
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <div style="flex: 1;">
+                        <p>Você pode dividir o conteúdo da tela usando CSS simples (Flexbox).</p>
+                        <ul>
+                            <li>Coluna 1: Textos</li>
+                            <li>Coluna 2: Imagens</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1;">
+                        <!-- Placeholder Image -->
+                        <img src="https://placehold.co/400x300/2F9E41/ffffff?text=Exemplo+de+Imagem"
+                            alt="Imagem Placeholder" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modificando Planos de Fundo -->
+            <section data-background-color="#2F9E41">
+                <h2 style="color: white; border-color: white;">Fundo Personalizado</h2>
+                <p style="color: white;">
+                    Adicione <code>data-background-color="#2F9E41"</code> à tag do slide para focar a atenção.
+                </p>
+                <p style="color: white;">Você pode usar cores, imagens e vídeos como fundo!</p>
+            </section>
+
+            <!-- Encerramento -->
+            <section>
+                <h1>Obrigado!</h1>
+                <p>Dúvidas?</p>
+                <br>
+                <p><small>lucas.bueno@ifsc.edu.br</small></p>
+                <div style="margin-top: 50px;">
+                    <p style="font-size: 0.8em; color: var(--if-green); font-weight: bold;">Instituto Federal de Santa
+                        Catarina</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Scripts do Reveal.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/zoom/zoom.js"></script>
+    <!-- Plugin de Matemática -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/math/math.js"></script>
+
+    <script>
+        // Inicialização e Configuração do Reveal.js
+        Reveal.initialize({
+            hash: true,
+            controls: true, // Mostra as setas de navegação
+            controlsTutorial: true, // Mostra o tutorial de navegação na primeira vez
+            progress: false, // Mostra a barra de progresso no fundo
+            center: true, // Centraliza verticalmente os slides
+            transition: 'slide', // Estilos de transição: none/fade/slide/convex/concave/zoom
+            margin: 0.15, // Margem ao redor dos slides
+            // Configuração do Plugin de Matemática (MathJax)
+            math: {
+                mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+                config: 'TeX-AMS_HTML-full',
+            },
+            // Carregamento de Plugins
+            plugins: [RevealMarkdown, RevealHighlight, RevealMath, RevealZoom]
+        }).then(() => {
+            const progressDecor = document.querySelector('.ifsc-decor');
+            const updateProgress = () => {
+                const progress = Reveal.getProgress() * 100;
+                progressDecor.style.setProperty('--progress', `${progress}%`);
+            };
+
+            updateProgress();
+            Reveal.addEventListener('slidechanged', updateProgress);
+        });
+    </script>
+</body>
+
+</html>
