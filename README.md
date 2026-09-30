@@ -1,4 +1,4 @@
-# Template do IFSC para o Reveal.js
+# Template do IFSC para apresentações com o Reveal.js
 
 Este repositório contém um template de apresentação do Instituto Federal de Santa Catarina (IFSC) feito com [Reveal.js](https://revealjs.com/). O arquivo principal é `template-ifsc-revealjs.html` e reúne exemplos de slides, navegação, código, fórmulas matemáticas, fragmentos e layouts. Veja uma demonstração do template [neste link](https://lucasbueno.github.io/template-ifsc-reveal.js/template-ifsc-revealjs.html).
 
