@@ -12,14 +12,7 @@ Este repositório contém um template de apresentação inspirado no design inst
 2. Abra `template-ifsc-revealjs.html` no navegador. É necessária conexão com a internet para carregar Reveal.js, Open Sans, MathJax e as imagens externas.
 3. Edite o slide de capa: troque o título, a disciplina e os dados do professor.
 4. Na `<div class="slides">`, cada `<section>` representa um slide. Altere os exemplos existentes ou duplique uma seção para criar novos slides.
-5. Salve o arquivo e atualize a página no navegador para conferir a apresentação.<div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
-  <iframe 
-    src="https://lucasbueno.github.io/template-ifsc-reveal.js/template-ifsc-revealjs.html" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-    allowfullscreen="true" 
-    loading="lazy">
-  </iframe>
-</div>
+5. Salve o arquivo e atualize a página no navegador para conferir a apresentação.
 
 ### Slides verticais
 
