@@ -138,6 +138,7 @@
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-height: 300px;
         }
     </style>
 </head>
@@ -312,7 +313,11 @@ def calcular_media(notas):
             progress: false, // Mostra a barra de progresso no fundo
             center: true, // Centraliza verticalmente os slides
             transition: 'slide', // Estilos de transição: none/fade/slide/convex/concave/zoom
-            margin: 0.15, // Margem ao redor dos slides
+            width: 1280,
+            height: 720,
+            margin: 0.04,
+            minScale: 0.2,
+            maxScale: 2.0,
             // Configuração do Plugin de Matemática (MathJax)
             math: {
                 mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
